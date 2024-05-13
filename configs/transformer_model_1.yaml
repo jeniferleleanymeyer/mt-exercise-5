@@ -5,7 +5,7 @@ joeynmt_version: "2.0.0"
 
 data:
     #changed
-    train: "data/train.it-en"
+    train: "data/train"
     #changed
     dev:   "data/dev.it-en"
     #changed
@@ -21,9 +21,9 @@ data:
         #changed
         voc_limit: 2000
         #changed
-        #tokenizer_type: "?"
-        #tokenizer_cfg:
-            #?
+        tokenizer_type: "none"
+        tokenizer_cfg: 
+            pretokenizer: "none"
     trg: 
         #changed
         lang: "en"
@@ -34,9 +34,9 @@ data:
         # changed
         voc_limit: 2000
         #changed
-        #tokenizer_type: "?"
-        #tokenizer_cfg:
-            #?
+        tokenizer_type: "none"
+        tokenizer_cfg: 
+            pretokenizer: "none"
 
 testing:
     #changed
