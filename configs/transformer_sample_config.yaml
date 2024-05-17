@@ -1,6 +1,7 @@
 name: "transformer_sample_config"
 joeynmt_version: "2.0.0"
 
+# it -> en
 
 data:
     train: "?"

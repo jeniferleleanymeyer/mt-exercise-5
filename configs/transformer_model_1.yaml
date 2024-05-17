@@ -7,9 +7,9 @@ data:
     #changed
     train: "data/train"
     #changed
-    dev:   "data/dev.it-en"
+    dev:   "data/dev"
     #changed
-    test:  "data/test.it-en"
+    test:  "data/test"
     dataset_type: "plain"
     src:
         #changed
@@ -21,9 +21,9 @@ data:
         #changed
         voc_limit: 2000
         #changed
-        tokenizer_type: "none"
-        tokenizer_cfg: 
-            pretokenizer: "none"
+        tokenizer_type: "moses"
+        #changed
+        tokenizer_cfg: {}
     trg: 
         #changed
         lang: "en"
@@ -31,12 +31,12 @@ data:
         level: "word"
         lowercase: False
         max_sent_length: 100
-        # changed
+        #changed
         voc_limit: 2000
         #changed
-        tokenizer_type: "none"
-        tokenizer_cfg: 
-            pretokenizer: "none"
+        tokenizer_type: "moses"
+        #changed
+        tokenizer_cfg: {}
 
 testing:
     #changed
@@ -61,16 +61,14 @@ training:
     validation_freq: 500
     logging_freq: 100
     eval_metric: "bleu"
+    #changed
     model_dir: "models/transformer_model_1"
     overwrite: False
     shuffle: True
-    #changed
-    use_cuda: True
+    use_cuda: False
     max_output_length: 100
     print_valid_sents: [0, 1, 2, 3, 4]
     label_smoothing: 0.3
-    #changed
-    fp16: True
 
 model:
     initializer: "xavier_uniform"

@@ -29,12 +29,34 @@ Download data:
     
 Before executing any further steps, you need to make the modifications described in the exercise pdf.
 
-Train a model:
+    ./scripts/preprocess.sh 
 
-    ./scripts/train.sh
+cuts of the first 100’000 of the downloaded training files.
 
-The training process can be interrupted at any time, and the best checkpoint will always be saved.
+    ./scripts/subword_voci.sh 
 
-Evaluate a trained model with
+creates the necessary code files and vocabularies (sizes 2000 & 5000) that are used for the training of `transformer_model_2` and `transformer_model_3`.
 
-    ./scripts/evaluate.sh
+    ./scripts/train_model_1.sh 
+    
+trains the first model that is based on word level with a vocabulary size of 2000.
+
+    ./scripts/train_model_2.sh 
+    
+trains the second model that is based on bpe level with a vocabulary size of $2000$ and the previously created vocabulary and code files. 
+
+    ./scripts/train_model_3.sh 
+
+trains the third model that is based on bpe level with a vocabulary size of $5000$ and the previously created vocabulary and code files. 
+
+    ./scripts/evaluate_model_1.sh 
+
+creates the translation based on `transformer_model_1`
+
+    ./scripts/evaluate_model_2.sh 
+
+creates the translation based on `transformer_model_2`
+
+    ./scripts/evaluate_model_3.sh 
+
+creates the translation based on `transformer_model_3`
