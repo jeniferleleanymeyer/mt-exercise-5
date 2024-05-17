@@ -8,7 +8,6 @@ configs=$base/configs
 
 mkdir -p $models
 
-# changed
 num_threads=4
 
 # measure time
@@ -18,7 +17,7 @@ SECONDS=0
 logs=$base/logs
 
 #changed
-model_name=transformer_model_1
+model_name=transformer_model_2
 
 mkdir -p $logs
 

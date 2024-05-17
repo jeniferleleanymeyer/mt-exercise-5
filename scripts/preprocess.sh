@@ -3,10 +3,10 @@
 scripts=$(dirname "$0")
 base=$scripts/..
 
-source_input=$base/data/train.it-en.it
+source_input=$base/data/train-it-en.it
 source_output=$base/data/train.it
 
-target_input=$base/data/train.it-en.en
+target_input=$base/data/train-it-en.en
 target_output=$base/data/train.en
 
 head -n 100000 $source_input > $source_output
