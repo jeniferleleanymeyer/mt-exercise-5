@@ -60,3 +60,7 @@ creates the translation based on `transformer_model_2`
     ./scripts/evaluate_model_3.sh 
 
 creates the translation based on `transformer_model_3`
+
+    ./scripts/table.sh
+
+creates the table in a .csv file and the plots that show the relationship between beam size, BLEU score and generation times.

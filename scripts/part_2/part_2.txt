@@ -1,0 +1,280 @@
+MT ex 5 - part 2
+
+beam size: 1
+###############################################################################
+model_name transformer_model_2
+2024-05-17 11:04:58,274 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2024-05-17 11:04:58,354 - INFO - joeynmt.model - Building an encoder-decoder model...
+2024-05-17 11:04:58,853 - INFO - joeynmt.model - Enc-dec model built.
+2024-05-17 11:04:59,181 - INFO - joeynmt.helpers - Load model from /mnt/c/Users/jenif/mt-exercise-5/models/transformer_model_2/43000.ckpt.
+2024-05-17 11:04:59,204 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 11:04:59,205 - INFO - joeynmt.tokenizers - en tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 11:04:59,243 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2024-05-17 11:04:59,244 - INFO - joeynmt.prediction - Predicting 1566 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2024-05-17 11:12:22,266 - INFO - joeynmt.prediction - Generation took 442.9834[sec]. (No references given)
+{
+ "name": "BLEU",
+ "score": 19.3,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.2",
+ "verbose_score": "50.0/25.2/14.0/7.9 (BP = 1.000 ratio = 1.052 hyp_len = 31939 ref_len = 30357)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.4.2"
+}
+time taken:
+517 seconds
+
+
+beam size: 2
+###############################################################################
+model_name transformer_model_2
+2024-05-17 10:59:39,013 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2024-05-17 10:59:39,273 - INFO - joeynmt.model - Building an encoder-decoder model...
+2024-05-17 10:59:41,134 - INFO - joeynmt.model - Enc-dec model built.
+2024-05-17 10:59:42,869 - INFO - joeynmt.helpers - Load model from /mnt/c/Users/jenif/mt-exercise-5/models/transformer_model_2/43000.ckpt.
+2024-05-17 10:59:42,945 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 10:59:42,946 - INFO - joeynmt.tokenizers - en tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 10:59:43,156 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2024-05-17 10:59:43,159 - INFO - joeynmt.prediction - Predicting 1566 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2024-05-17 11:03:06,376 - INFO - joeynmt.prediction - Generation took 203.1887[sec]. (No references given)
+{
+ "name": "BLEU",
+ "score": 21.7,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.2",
+ "verbose_score": "55.2/29.0/16.6/9.8 (BP = 0.960 ratio = 0.961 hyp_len = 29174 ref_len = 30357)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.4.2"
+}
+time taken:
+303 seconds
+
+
+beam size: 3
+###############################################################################
+model_name transformer_model_2
+2024-05-17 11:16:10,446 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2024-05-17 11:16:10,516 - INFO - joeynmt.model - Building an encoder-decoder model...
+2024-05-17 11:16:10,926 - INFO - joeynmt.model - Enc-dec model built.
+2024-05-17 11:16:11,245 - INFO - joeynmt.helpers - Load model from /mnt/c/Users/jenif/mt-exercise-5/models/transformer_model_2/43000.ckpt.
+2024-05-17 11:16:11,265 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 11:16:11,265 - INFO - joeynmt.tokenizers - en tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 11:16:11,300 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2024-05-17 11:16:11,300 - INFO - joeynmt.prediction - Predicting 1566 example(s)... (Beam search with beam_size=3, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2024-05-17 11:20:05,208 - INFO - joeynmt.prediction - Generation took 233.8786[sec]. (No references given)
+{
+ "name": "BLEU",
+ "score": 21.8,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.2",
+ "verbose_score": "56.7/29.9/17.2/10.2 (BP = 0.932 ratio = 0.934 hyp_len = 28357 ref_len = 30357)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.4.2"
+}
+time taken:
+258 seconds
+
+
+beam size: 4
+###############################################################################
+model_name transformer_model_2
+2024-05-17 11:21:02,612 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2024-05-17 11:21:02,691 - INFO - joeynmt.model - Building an encoder-decoder model...
+2024-05-17 11:21:03,158 - INFO - joeynmt.model - Enc-dec model built.
+2024-05-17 11:21:03,501 - INFO - joeynmt.helpers - Load model from /mnt/c/Users/jenif/mt-exercise-5/models/transformer_model_2/43000.ckpt.
+2024-05-17 11:21:03,522 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 11:21:03,522 - INFO - joeynmt.tokenizers - en tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 11:21:03,560 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2024-05-17 11:21:03,560 - INFO - joeynmt.prediction - Predicting 1566 example(s)... (Beam search with beam_size=4, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2024-05-17 11:26:17,854 - INFO - joeynmt.prediction - Generation took 314.2675[sec]. (No references given)
+{
+ "name": "BLEU",
+ "score": 22.0,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.2",
+ "verbose_score": "57.3/30.4/17.7/10.5 (BP = 0.922 ratio = 0.925 hyp_len = 28066 ref_len = 30357)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.4.2"
+}
+time taken:
+340 seconds
+
+
+beam size: 5
+###############################################################################
+model_name transformer_model_2
+2024-05-17 11:54:28,345 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2024-05-17 11:54:28,419 - INFO - joeynmt.model - Building an encoder-decoder model...
+2024-05-17 11:54:29,029 - INFO - joeynmt.model - Enc-dec model built.
+2024-05-17 11:54:29,518 - INFO - joeynmt.helpers - Load model from /mnt/c/Users/jenif/mt-exercise-5/models/transformer_model_2/43000.ckpt.
+2024-05-17 11:54:29,552 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 11:54:29,552 - INFO - joeynmt.tokenizers - en tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 11:54:29,631 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2024-05-17 11:54:29,631 - INFO - joeynmt.prediction - Predicting 1566 example(s)... (Beam search with beam_size=5, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2024-05-17 12:01:09,354 - INFO - joeynmt.prediction - Generation took 399.6988[sec]. (No references given)
+{
+ "name": "BLEU",
+ "score": 22.0,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.2",
+ "verbose_score": "57.8/30.8/18.0/10.7 (BP = 0.909 ratio = 0.913 hyp_len = 27716 ref_len = 30357)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.4.2"
+}
+time taken:
+443 seconds
+
+
+beam size: 6
+###############################################################################
+model_name transformer_model_2
+2024-05-17 12:01:53,960 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2024-05-17 12:01:54,024 - INFO - joeynmt.model - Building an encoder-decoder model...
+2024-05-17 12:01:54,405 - INFO - joeynmt.model - Enc-dec model built.
+2024-05-17 12:01:54,684 - INFO - joeynmt.helpers - Load model from /mnt/c/Users/jenif/mt-exercise-5/models/transformer_model_2/43000.ckpt.
+2024-05-17 12:01:54,705 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 12:01:54,706 - INFO - joeynmt.tokenizers - en tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 12:01:54,762 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2024-05-17 12:01:54,762 - INFO - joeynmt.prediction - Predicting 1566 example(s)... (Beam search with beam_size=6, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2024-05-17 12:09:51,547 - INFO - joeynmt.prediction - Generation took 476.7608[sec]. (No references given)
+{
+ "name": "BLEU",
+ "score": 21.9,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.2",
+ "verbose_score": "57.8/30.7/17.9/10.7 (BP = 0.907 ratio = 0.911 hyp_len = 27652 ref_len = 30357)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.4.2"
+}
+time taken:
+497 seconds
+
+
+beam size: 7
+###############################################################################
+model_name transformer_model_2
+2024-05-17 12:10:35,839 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2024-05-17 12:10:35,900 - INFO - joeynmt.model - Building an encoder-decoder model...
+2024-05-17 12:10:36,316 - INFO - joeynmt.model - Enc-dec model built.
+2024-05-17 12:10:36,620 - INFO - joeynmt.helpers - Load model from /mnt/c/Users/jenif/mt-exercise-5/models/transformer_model_2/43000.ckpt.
+2024-05-17 12:10:36,640 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 12:10:36,640 - INFO - joeynmt.tokenizers - en tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 12:10:36,681 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2024-05-17 12:10:36,681 - INFO - joeynmt.prediction - Predicting 1566 example(s)... (Beam search with beam_size=7, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2024-05-17 12:20:00,464 - INFO - joeynmt.prediction - Generation took 563.7527[sec]. (No references given)
+{
+ "name": "BLEU",
+ "score": 22.0,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.2",
+ "verbose_score": "57.9/30.9/18.2/10.9 (BP = 0.902 ratio = 0.906 hyp_len = 27509 ref_len = 30357)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.4.2"
+}
+time taken:
+585 seconds
+
+
+beam size: 8
+###############################################################################
+model_name transformer_model_2
+2024-05-17 12:21:34,083 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2024-05-17 12:21:34,147 - INFO - joeynmt.model - Building an encoder-decoder model...
+2024-05-17 12:21:34,569 - INFO - joeynmt.model - Enc-dec model built.
+2024-05-17 12:21:34,855 - INFO - joeynmt.helpers - Load model from /mnt/c/Users/jenif/mt-exercise-5/models/transformer_model_2/43000.ckpt.
+2024-05-17 12:21:34,874 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 12:21:34,874 - INFO - joeynmt.tokenizers - en tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 12:21:34,917 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2024-05-17 12:21:34,917 - INFO - joeynmt.prediction - Predicting 1566 example(s)... (Beam search with beam_size=8, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2024-05-17 12:32:44,985 - INFO - joeynmt.prediction - Generation took 670.0442[sec]. (No references given)
+{
+ "name": "BLEU",
+ "score": 21.9,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.2",
+ "verbose_score": "58.1/31.0/18.2/11.0 (BP = 0.894 ratio = 0.899 hyp_len = 27306 ref_len = 30357)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.4.2"
+}
+time taken:
+691 seconds
+
+
+beam size: 9
+###############################################################################
+model_name transformer_model_2
+2024-05-17 12:38:21,318 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2024-05-17 12:38:21,381 - INFO - joeynmt.model - Building an encoder-decoder model...
+2024-05-17 12:38:21,792 - INFO - joeynmt.model - Enc-dec model built.
+2024-05-17 12:38:22,075 - INFO - joeynmt.helpers - Load model from /mnt/c/Users/jenif/mt-exercise-5/models/transformer_model_2/43000.ckpt.
+2024-05-17 12:38:22,095 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 12:38:22,096 - INFO - joeynmt.tokenizers - en tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 12:38:22,141 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2024-05-17 12:38:22,141 - INFO - joeynmt.prediction - Predicting 1566 example(s)... (Beam search with beam_size=9, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2024-05-17 12:50:49,993 - INFO - joeynmt.prediction - Generation took 747.8272[sec]. (No references given)
+{
+ "name": "BLEU",
+ "score": 22.0,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.2",
+ "verbose_score": "58.1/31.2/18.4/11.1 (BP = 0.893 ratio = 0.898 hyp_len = 27265 ref_len = 30357)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.4.2"
+}
+time taken:
+771 seconds
+
+
+beam size: 10
+###############################################################################
+model_name transformer_model_2
+2024-05-17 13:02:27,003 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2024-05-17 13:02:27,166 - INFO - joeynmt.model - Building an encoder-decoder model...
+2024-05-17 13:02:27,620 - INFO - joeynmt.model - Enc-dec model built.
+2024-05-17 13:02:27,885 - INFO - joeynmt.helpers - Load model from /mnt/c/Users/jenif/mt-exercise-5/models/transformer_model_2/43000.ckpt.
+2024-05-17 13:02:27,904 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 13:02:27,905 - INFO - joeynmt.tokenizers - en tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2024-05-17 13:02:27,939 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2024-05-17 13:02:27,940 - INFO - joeynmt.prediction - Predicting 1566 example(s)... (Beam search with beam_size=10, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2024-05-17 13:16:27,975 - INFO - joeynmt.prediction - Generation took 840.0095[sec]. (No references given)
+{
+ "name": "BLEU",
+ "score": 22.0,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.2",
+ "verbose_score": "58.2/31.3/18.5/11.1 (BP = 0.890 ratio = 0.896 hyp_len = 27197 ref_len = 30357)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.4.2"
+}
+time taken:
+862 seconds
